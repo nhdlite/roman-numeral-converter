@@ -1,0 +1,22 @@
+{
+  "name": "roman-numeral-converter",
+  "version": "0.0.1",
+  "description": "A simple module to convert integers to Roman numerals and back.",
+  "main": "romanNumerals.js",
+  "scripts": {
+    "test": "tape romanNumerals.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhdlite/roman-numeral-converter.git"
+  },
+  "author": "Nate Dessert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhdlite/roman-numeral-converter/issues"
+  },
+  "homepage": "https://github.com/nhdlite/roman-numeral-converter#readme",
+  "devDependencies": {
+    "tape": "^4.9.2"
+  }
+}
