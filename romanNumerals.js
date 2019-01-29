@@ -18,7 +18,11 @@ function convertToRomanNumeral(number) {
     let tensPlaceIndex = 0;
     let convertedDigits = []; // Entries will be added in reverse. Will need to flip them before returning.
 
-    if (number <= 0) {
+    if (number === 0) {
+        return 'nulla';
+    }
+
+    if (number < 0) {
         throw "Not a valid number";
     }
 

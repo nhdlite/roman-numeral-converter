@@ -1,6 +1,12 @@
 const test = require('tape');
 const romanNumerals = require('./romanNumerals');
 
+test('0 yields nulla', (t) => {
+    const result = romanNumerals.convertToRomanNumeral(0);
+    t.equals(result, 'nulla');
+    t.end();
+});
+
 test('1 yields I', (t) => {
     const result = romanNumerals.convertToRomanNumeral(1);
     t.equals(result, 'I');
@@ -89,7 +95,7 @@ test('246 yields CCXLVI', (t) => {
     const result = romanNumerals.convertToRomanNumeral(246);
     t.equals(result, 'CCXLVI');
     t.end();
-});
+}); 
 
 
 test('3999 yields MMMCMXCIX', (t) => {
