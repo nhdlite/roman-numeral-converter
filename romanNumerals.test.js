@@ -103,3 +103,10 @@ test('3999 yields MMMCMXCIX', (t) => {
     t.equals(result, 'MMMCMXCIX');
     t.end();
 });
+
+test('4000 yields error', (t) => {
+    const result = romanNumerals.convertToRomanNumeral(4000);
+    t.equals(result, 'This converter only supports Roman numerals up to 3999');
+    t.end();
+});
+

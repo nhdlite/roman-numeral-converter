@@ -23,7 +23,11 @@ function convertToRomanNumeral(number) {
     }
 
     if (number < 0) {
-        throw "Not a valid number";
+        return 'Roman numerals must be positive integers';
+    }
+
+    if (number > 3999) {
+        return 'This converter only supports Roman numerals up to 3999';
     }
 
     while(number > 0) {
@@ -35,9 +39,6 @@ function convertToRomanNumeral(number) {
                 convertedValue = convertedValue + romanNumeralConversion[tensPlaceIndex].romC;
             }
         } else if (currentDigit === 4) {
-            if (tensPlaceIndex + 1 > romanNumeralConversion.length) {
-                throw "Roman numerals cannot be greater than 3999";
-            }
             convertedValue = romanNumeralConversion[tensPlaceIndex].romC + romanNumeralConversion[tensPlaceIndex + 1].romC;
         } else if (currentDigit > 4 && currentDigit < 9) {
             convertedValue = romanNumeralConversion[tensPlaceIndex + 1].romC;
@@ -45,9 +46,6 @@ function convertToRomanNumeral(number) {
                 convertedValue = convertedValue + romanNumeralConversion[tensPlaceIndex].romC;
             }
         } else if (currentDigit === 9) {
-            if (tensPlaceIndex + 2 > romanNumeralConversion.length) {
-                throw "Roman numerals cannot be greater than 3999";
-            }
             convertedValue = romanNumeralConversion[tensPlaceIndex].romC + romanNumeralConversion[tensPlaceIndex + 2].romC;
         } else {
             // Do Nothing. The digit is a 0.
