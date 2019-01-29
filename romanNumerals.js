@@ -1,3 +1,9 @@
+function convertInput() {
+    const number = parseInt(document.getElementById('numberField').value);
+    const result = convertToRomanNumeral(number);
+    document.getElementById('resultField').innerHTML = result;
+}
+
 function convertToRomanNumeral(number) {
     const romanNumeralConversion = [
         { romC: 'I', romI: 1 },
